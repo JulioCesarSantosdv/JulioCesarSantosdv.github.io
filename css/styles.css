@@ -16,236 +16,249 @@
 Declaring variables
 */
 :root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #bd5d38;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #bd5d38;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --blue: #007bff; /* Blue color variable */
+  --indigo: #6610f2; /* Indigo color variable */
+  --purple: #6f42c1; /* Purple color variable */
+  --pink: #e83e8c; /* Pink color variable */
+  --red: #dc3545; /* Red color variable */
+  --orange: #bd5d38; /* Orange color variable */
+  --yellow: #ffc107; /* Yellow color variable */
+  --green: #28a745; /* Green color variable */
+  --teal: #20c997; /* Teal color variable */
+  --cyan: #17a2b8; /* Cyan color variable */
+  --white: #dbdad7; /* White color variable */
+  --gray: #6c757d; /* Gray color variable */
+  --gray-dark: #343a40; /* Dark gray color variable */
+  --primary: #bd5d38; /* Primary color variable */
+  --secondary: #6c757d; /* Secondary color variable */
+  --success: #28a745; /* Success color variable */
+  --info: #17a2b8; /* Info color variable */
+  --warning: #ffc107; /* Warning color variable */
+  --danger: #dc3545; /* Danger color variable */
+  --light: #dbdad7; /* Light color variable */
+  --dark: #343a40; /* Dark color variable */
+  --breakpoint-xs: 0; /* Extra small breakpoint */
+  --breakpoint-sm: 576px; /* Small breakpoint */
+  --breakpoint-md: 768px; /* Medium breakpoint */
+  --breakpoint-lg: 992px; /* Large breakpoint */
+  --breakpoint-xl: 1200px; /* Extra large breakpoint */
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Sans-serif font stack */
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* Monospace font stack */
 }
-
- /*!
+ /* Style for the language switch button */
+        #languageSwitcher {
+          position: fixed;
+          top: 10px;
+          right: 10px;
+          z-index: 1000;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+      }
+/*!
 Global CSS Resets
 */
 [data-lang="pt"] {
-  display: none;
+  display: none; /* Hide elements when the language is Portuguese */
 }
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Apply border-box sizing model to all elements */
 }
 
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: sans-serif; /* Set base font family */
+  line-height: 1.15; /* Set base line-height */
+  -webkit-text-size-adjust: 100%; /* Prevent text size adjustment on iOS */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Remove tap highlight color on iOS */
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block;
+  display: block; /* Ensure block display for semantic elements */
 }
 
 body {
-  margin: 0;
-  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", 
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: left;
-  background-color: #fff;
+  margin: 0; /* Remove default margin */
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Set body font family */
+  font-size: 1rem; /* Set base font size */
+  font-weight: 400; /* Set base font weight */
+  line-height: 1.5; /* Set line height */
+  color: #212529; /* Set base text color */
+  text-align: left; /* Set text alignment */
+  background-color: #fff; /* Set background color */
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
-  outline: 0 !important;
+  outline: 0 !important; /* Remove outline for elements with tabindex -1 */
 }
 
 hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+  box-sizing: content-box; /* Apply content-box sizing model */
+  height: 0; /* Set height to 0 */
+  overflow: visible; /* Ensure overflow is visible */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 0.5rem; /* Set bottom margin */
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 1rem; /* Set bottom margin */
 }
 
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  cursor: help;
-  border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration: underline; /* Underline abbreviation */
+  -webkit-text-decoration: underline dotted; /* Underline with dots for WebKit browsers */
+          text-decoration: underline dotted; /* Underline with dots */
+  cursor: help; /* Set cursor to help */
+  border-bottom: 0; /* Remove border-bottom */
+  -webkit-text-decoration-skip-ink: none; /* Skip ink for text-decoration in WebKit browsers */
+          text-decoration-skip-ink: none; /* Skip ink for text-decoration */
 }
 
 address {
-  margin-bottom: 1rem;
-  font-style: normal;
-  line-height: inherit;
+  margin-bottom: 1rem; /* Set bottom margin */
+  font-style: normal; /* Set font style to normal */
+  line-height: inherit; /* Inherit line-height */
 }
 
 ol,
 ul,
 dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 1rem; /* Set bottom margin */
 }
 
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-bottom: 0;
+  margin-bottom: 0; /* Remove bottom margin for nested lists */
 }
 
 dt {
-  font-weight: 700;
+  font-weight: 700; /* Set font weight for definition terms */
 }
 
 dd {
-  margin-bottom: 0.5rem;
-  margin-left: 0;
+  margin-bottom: 0.5rem; /* Set bottom margin for definition descriptions */
+  margin-left: 0; /* Remove left margin */
 }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 1rem; /* Set bottom margin */
 }
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: bolder; /* Set font weight to bolder */
 }
 
 small {
-  font-size: 80%;
+  font-size: 80%; /* Set font size to 80% */
 }
 
 sub,
 sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline;
+  position: relative; /* Set position to relative */
+  font-size: 75%; /* Set font size to 75% */
+  line-height: 0; /* Set line height to 0 */
+  vertical-align: baseline; /* Align vertically to baseline */
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -0.25em; /* Position subscript lower */
 }
 
 sup {
-  top: -0.5em;
+  top: -0.5em; /* Position superscript higher */
 }
 
+/* Links*/
 a {
-  color: #385bbd;
-  text-decoration: none;
-  background-color: transparent;
+  color: #385bbd; /* Set link color */
+  text-decoration: none; /* Remove text decoration for links */
+  background-color: transparent; /* Set background color to transparent */
 }
 a:hover {
-  color: #385bbd;
-  text-decoration: underline;
+  color: #385bbd; /* Set link color on hover */
+  text-decoration: underline; /* Underline link on hover */
 }
 
 a:not([href]) {
-  color: inherit;
-  text-decoration: none;
+  color: inherit; /* Inherit color for links without href */
+  text-decoration: none; /* Remove text decoration for links without href */
 }
 a:not([href]):hover {
-  color: inherit;
-  text-decoration: none;
+  color: inherit; /* Inherit color on hover for links without href */
+  text-decoration: none; /* Remove text decoration on hover for links without href */
 }
 
 pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1em;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* Set monospace font family */
+  font-size: 1em; /* Set font size */
 }
 
 pre {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
-  -ms-overflow-style: scrollbar;
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 1rem; /* Set bottom margin */
+  overflow: auto; /* Enable auto overflow */
+  -ms-overflow-style: scrollbar; /* Set scrollbar style for Internet Explorer */
 }
 
 figure {
-  margin: 0 0 1rem;
+  margin: 0 0 1rem; /* Set bottom margin */
 }
 
 img {
-  vertical-align: middle;
-  border-style: none;
+  vertical-align: middle; /* Align images vertically to middle */
+  border-style: none; /* Remove border style */
 }
 
 svg {
-  overflow: hidden;
-  vertical-align: middle;
+  overflow: hidden; /* Hide overflow for SVG */
+  vertical-align: middle; /* Align SVG vertically to middle */
 }
 
 table {
-  border-collapse: collapse;
+  border-collapse: collapse; /* Collapse table borders */
 }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  color: #6c757d;
-  text-align: left;
-  caption-side: bottom;
+  padding-top: 0.75rem; /* Set top padding */
+  padding-bottom: 0.75rem; /* Set bottom padding */
+  color: #6c757d; /* Set color for table captions */
+  text-align: left; /* Align caption text to the left */
+  caption-side: bottom; /* Position caption at the bottom */
 }
 
 th {
-  text-align: inherit;
+  text-align: inherit; /* Inherit text alignment for table headers */
 }
 
 label {
-  display: inline-block;
-  margin-bottom: 0.5rem;
+  display: inline-block; /* Display labels as inline-block */
+  margin-bottom: 0.5rem; /* Set bottom margin for labels */
 }
 
+/* Buttons */
 button {
-  border-radius: 0;
+  border-radius: 0; /* Remove border radius */
 }
 
 button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 1px dotted; /* Set dotted outline for focused buttons */
+  outline: 5px auto -webkit-focus-ring-color; /* Set focus ring outline for WebKit browsers */
 }
 
 input,
@@ -253,69 +266,70 @@ button,
 select,
 optgroup,
 textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  margin: 0; /* Remove margin */
+  font-family: inherit; /* Inherit font family */
+  font-size: inherit; /* Inherit font size */
+  line-height: inherit; /* Inherit line height */
 }
 
 button,
 input {
-  overflow: visible;
+  overflow: visible; /* Ensure overflow is visible for button and input elements */
 }
 
 button,
 select {
-  text-transform: none;
+  text-transform: none; /* Remove text transformation for button and select elements */
 }
 
 [role=button] {
-  cursor: pointer;
+  cursor: pointer; /* Set cursor to pointer for elements with role='button' */
 }
 
 select {
-  word-wrap: normal;
+  word-wrap: normal; /* Ensure normal word wrapping for select elements */
 }
 
 button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+  -webkit-appearance: button; /* Apply button appearance for WebKit browsers */
 }
 
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
-  cursor: pointer;
+  cursor: pointer; /* Set cursor to pointer for enabled buttons */
 }
 
 button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
 [type=submit]::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
+  padding: 0; /* Remove padding for inner focus rings in Mozilla browsers */
+  border-style: none; /* Remove border style for inner focus rings in Mozilla browsers */
 }
 
 input[type=radio],
 input[type=checkbox] {
-  box-sizing: border-box;
-  padding: 0;
+  box-sizing: border-box; /* Apply border-box sizing model for radio and checkbox inputs */
+  padding: 0; /* Remove padding for radio and checkbox inputs */
 }
 
 textarea {
-  overflow: auto;
-  resize: vertical;
+  overflow: auto; /* Enable auto overflow for textarea */
+  resize: vertical; /* Allow vertical resizing for textarea */
 }
 
 fieldset {
-  min-width: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
+  min-width: 0; /* Set minimum width to 0 for fieldset */
+  padding: 0; /* Remove padding for fieldset */
+  margin: 0; /* Remove margin for fieldset */
+  border: 0; /* Remove border for fieldset */
 }
+
 
 legend {
   display: block;

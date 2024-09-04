@@ -15,21 +15,85 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        /* Estilo para o botão de troca de idioma */
-        #languageSwitcher {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
+/* Container que contém os itens do projeto */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 300px; /* Ajuste o espaçamento entre os flexboxes */
+}
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Se estiver alinhando itens verticalmente */
+    gap: 20px; /* Ajusta o espaçamento entre os itens */
+}
+.container {
+    display: grid;
+    place-items: center; /* Centraliza horizontal e verticalmente */
+    height: 100%; /* Necessário para a centralização vertical funcionar */
+}
+
+h3 {
+    text-align: center; /* Centraliza o texto dentro do próprio h3 */
+}
+/* Estilo para os itens de projeto */
+        .project-item {
+            width: 500px;
+            height: 350px; /* Altura fixa para garantir o formato paisagem */
+            border: 1px solid #ddd;
+            overflow: hidden;
+            transition: transform 0.3s ease;
         }
+        
+        .project-item:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: auto;
+            max-height: 120px; /* Controla a altura da imagem */
+            object-fit: cover;
+        }
+        
+        .project-details {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        .project-container {
+            display: flex;
+            flex-direction: column; /* Empilha itens verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            text-align: center; /* Centraliza o texto dentro do contêiner */
+        }
+        
+        .project-details h3 {
+            margin-bottom: 10px;
+        }
+        
+        .project-details p {
+            flex-grow: 1;
+           
+        }
+        
+        .btn-primary {
+            align-self: center;
+            margin-top: auto;
+        }
+        
+                /* Estilo para a seção de projetos */
+        .resume-section-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+
     </style>
 </head>
+
 <body id="page-top">
     <!-- Botão de troca de idioma -->
     <button id="languageSwitcher">PT</button>
@@ -51,7 +115,7 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Experience" data-en="Experience" data-pt="Experiência">Experience</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Education" data-en="Education" data-pt="Educação">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Skills" data-en="Skills" data-pt="Habilidades">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Interests" data-en="Interests" data-pt="Interesses">Interests</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Projects" data-en="Projects" data-pt="Projetos">Projetos</a></li>
             </ul>
         </div>
     </nav>
@@ -60,32 +124,64 @@
         <!-- About Me -->
         <section class="resume-section" id="About Me">
             <div class="resume-section-content">
-                <h1 class="mb-0" data-en="Julio Cesar" data-pt="Julio Cesar">Julio Cesar <span class="text-primary" data-en="Santos" data-pt="Santos">Santos</span></h1>
-                <div class="subheading mb-5" data-en="Bangú, Rio de Janeiro · RJ · +55 (21) 98638-9398 · jc-santos-2@hotmail.com" data-pt="Bangú, Rio de Janeiro · RJ · +55 (21) 98638-9398 · jc-santos-2@hotmail.com">Bangú, Rio de Janeiro · RJ · +55 (21) 98638-9398 · <a href="mailto:jc-santos-2@hotmail.com">jc-santos-2@hotmail.com</a></div>
-                <p class="lead mb-5" data-en="Welcome to my profile! My name is Julio Cesar Santos. I am a computer technician. My professional experience since then has been in computer maintenance. For some time now, I've become a programming enthusiast. Yes, I can say that I am an aspiring software developer. I confess that I don't have a childhood memory about technology or anything like that. My interest in technology came late to me compared to so many other professionals. But I've always attempted to bring solutions and give my best in what I do.Technology has become a passion over time." data-pt="Bem-vindo ao meu perfil! Meu nome é Julio Cesar Santos. Sou técnico em informática. Minha experiência profissional desde então tem sido na manutenção de computadores. Já faz algum tempo que me tornei um entusiasta da programação. Sim, posso dizer que sou um desenvolvedor de software em ascensão. Confesso que não tenho uma memória de infância sobre tecnologia ou algo assim. Meu interesse por tecnologia veio tarde para mim em comparação com tantos outros profissionais. Mas sempre tentei trazer soluções e dar o meu melhor no que faço. A tecnologia se tornou uma paixão ao longo do tempo.">Welcome to my profile! My name is Julio Cesar Santos. I am a computer technician. My professional experience since then has been in computer maintenance. For some time now, I've become a programming enthusiast. Yes, I can say that I am an aspiring software developer. I confess that I don't have a childhood memory about technology or anything like that. My interest in technology came late to me compared to so many other professionals. But I've always attempted to bring solutions and give my best in what I do. Technology has become a passion over time.</p>
+                <h1 class="mb-0">
+                    <span data-en="Julio Cesar" data-pt="Julio Cesar">Julio Cesar</span>
+                    <span class="text-primary" data-en="Santos" data-pt="Santos">Santos</span>
+                </h1>
+                <div class="subheading mb-5">
+                    <span data-en="Bangú, Rio de Janeiro · RJ · +55 (21) 98638-9398 · " data-pt="Bangú, Rio de Janeiro · RJ · +55 (21) 98638-9398 · ">Bangú, Rio de Janeiro · RJ · +55 (21) 98638-9398 · </span>
+                    <a href="mailto:jc-santos-2@hotmail.com" data-en="jc-santos-2@hotmail.com" data-pt="jc-santos-2@hotmail.com">jc-santos-2@hotmail.com</a>
+                </div>
+                <p class="lead mb-5" data-en="Welcome to my profile! My name is Julio Cesar Santos. I am a computer technician with experience in computer maintenance. Over time, I have developed a passion for programming and am now an aspiring software developer. My journey into technology didn't start in childhood like many others; my interest grew later in life. However, I have always been dedicated to finding solutions and giving my best in everything I do. Technology has become a true passion for me." data-pt="Bem-vindo ao meu perfil! Meu nome é Julio Cesar Santos. Sou técnico em informática. Minha experiência profissional desde então tem sido na manutenção de computadores. Já faz algum tempo que me tornei um entusiasta da programação. Sim, posso dizer que sou um desenvolvedor de software em ascensão. Confesso que não tenho uma memória de infância sobre tecnologia ou algo assim. Meu interesse por tecnologia veio tarde para mim em comparação com tantos outros profissionais. Mas sempre tentei trazer soluções e dar o meu melhor no que faço. A tecnologia se tornou uma paixão ao longo do tempo.">
+                    Welcome to my profile! My name is Julio Cesar Santos. I am a computer technician with experience in computer maintenance. Over time, I have developed a passion for programming and am now an aspiring software developer. My journey into technology didn't start in childhood like many others; my interest grew later in life. However, I have always been dedicated to finding solutions and giving my best in everything I do. Technology has become a true passion for me.
+                </p>
                 <div class="social-icons">
                     <a class="social-icon" href="https://www.linkedin.com/in/juliocesarsantos/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a class="social-icon" href="https://github.com/JulioCesarSantosdv?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
                     <a class="social-icon" href="https://api.whatsapp.com/send?1=pt_BR&phone=5521986389398" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a class="social-icon" href="https://www.facebook.com/profile.php?id=100049911679555" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
-        </section>
+        </section>              
         <hr class="m-0" />
         <!-- Experience -->
         <section class="resume-section" id="Experience">
             <div class="resume-section-content">
                 <h2 class="mb-5" data-en="Experience" data-pt="Experiência">Experience</h2>
+            
+                <!-- Chip Tecnologia -->
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0" data-en="TIC Support Technician" data-pt="Técnico de Suporte TIC">TIC Support Technician</h3>
                         <div class="subheading mb-3" data-en="Chip Tecnologia" data-pt="Chip Tecnologia">Chip Tecnologia</div>
-                        <p data-en="Temporary Contract: Instituto Nacional de Educação dos Surdos[INES]" data-pt="Contrato Temporário: Instituto Nacional de Educação dos Surdos[INES]">Temporary Contract: Instituto Nacional de Educação dos Surdos[INES]</p>
-                        <p data-en="Monitoring and handling of calls by the GLPI system generated by users. Perform installation, configuration and maintenance of computers. Management of permissions to network resources by Active Directory 2016 (AD). Permissions Management users' access to collaborative tools on Google Workplace." data-pt="Monitoramento e tratamento de chamados pelo sistema GLPI gerados por usuários. Realizar instalação, configuração e manutenção de computadores. Gestão de permissões para recursos de rede pelo Active Directory 2016 (AD). Gestão de permissões de acesso dos usuários às ferramentas colaborativas no Google Workplace.">Monitoring and handling of calls by the GLPI system generated by users. Perform installation, configuration and maintenance of computers. Management of permissions to network resources by Active Directory 2016 (AD). Permissions Management users' access to collaborative tools on Google Workplace.</p>
+                        <p data-en="Temporary Contract: National Institute for the Deaf Education [INES]" data-pt="Contrato Temporário: Instituto Nacional de Educação dos Surdos [INES]">Temporary Contract: National Institute for the Deaf Education [INES]</p>
+                        <p data-en="Monitored and handled user-generated tickets through the GLPI system. Performed installation, configuration, and maintenance of computers. Managed network resource permissions via Active Directory 2016 (AD). Managed user access permissions to collaborative tools in Google Workspace." data-pt="Monitoramento e tratamento de chamados pelo sistema GLPI gerados por usuários. Realizar instalação, configuração e manutenção de computadores. Gestão de permissões para recursos de rede pelo Active Directory 2016 (AD). Gestão de permissões de acesso dos usuários às ferramentas colaborativas no Google Workplace.">Monitored and handled user-generated tickets through the GLPI system. Performed installation, configuration, and maintenance of computers. Managed network resource permissions via Active Directory 2016 (AD). Managed user access permissions to collaborative tools in Google Workspace.</p>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary" data-en="July 2021 to October 2021" data-pt="Julho de 2021 a Outubro de 2021">July 2021 to October 2021</span></div>
                 </div>
+            
+                <!-- Solutis Tecnologias -->
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0" data-en="IT Technician (L2)" data-pt="Técnico de TI (L2)">IT Technician (L2)</h3>
+                        <div class="subheading mb-3" data-en="Solutis Tecnologias" data-pt="Solutis Tecnologias">Solutis Tecnologias</div>
+                        <p data-en="Contract: Federal Regional Court of the 2nd Region - Rio de Janeiro" data-pt="Contrato: Tribunal Regional Federal da 2ª Região - Rio de Janeiro">Contract: Federal Regional Court of the 2nd Region - Rio de Janeiro</p>
+                        <p data-en="Provided local network repair services, installed and configured computers and routers, and worked with structured cabling." data-pt="Realizou serviços de reparo de rede local, instalação e configuração de computadores e roteadores, e trabalhou com cabeamento estruturado.">Provided local network repair services, installed and configured computers and routers, and worked with structured cabling.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary" data-en="December 2015 to March 2016" data-pt="Dezembro de 2015 a Março de 2016">December 2015 to March 2016</span></div>
+                </div>
+            
+                <!-- Sonda Prockwork IT -->
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0" data-en="Help Desk Analyst (L1)" data-pt="Analista de Help Desk (L1)">Help Desk Analyst (L1)</h3>
+                        <div class="subheading mb-3" data-en="Sonda Prockwork IT" data-pt="Sonda Prockwork IT">Sonda Prockwork IT</div>
+                        <p data-en="Contract: Liquigás & BR Distribuidora (Petrobrás)" data-pt="Contrato: Liquigás & BR Distribuidora (Petrobrás)">Contract: Liquigás & BR Distribuidora (Petrobrás)</p>
+                        <p data-en="Provided corporate user support via phone and IBM Lotus Sametime. Monitored and escalated incidents to the 2nd level, ensuring compliance with established SLAs. Installed software and performed remote updates in a Citrix virtualized environment." data-pt="Atendimento a usuários corporativos por telefone e IBM Lotus Sametime. Monitoramento e escalonamento de incidentes para o 2º nível, garantindo conformidade com os SLAs estabelecidos. Instalação de software e realização de atualizações remotas em um ambiente virtualizado Citrix.">Provided corporate user support via phone and IBM Lotus Sametime. Monitored and escalated incidents to the 2nd level, ensuring compliance with established SLAs. Installed software and performed remote updates in a Citrix virtualized environment.</p>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary" data-en="March 2015 to December 2015" data-pt="Março de 2015 a Dezembro de 2015">March 2015 to December 2015</span></div>
+                </div>
             </div>
+            
         </section>
         <hr class="m-0" />
         <!-- Education -->
@@ -94,13 +190,70 @@
                 <h2 class="mb-5" data-en="Education" data-pt="Educação">Education</h2>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0" data-en="Information Systems - Bachelor's Degree" data-pt="Sistema da Informação - Bacharelado">Sistema da Informação - Bachelor's Degree</h3>
-                        <div class="subheading mb-3" data-en="Universidade Estácio de Sá" data-pt="Universidade Estácio de Sá">Universidade Estácio de Sá</div>
-                        <p data-en="Study Systems Development, Database Management, Networking, Cybersecurity, etc." data-pt="Estudo de Desenvolvimento de Sistemas, Gestão de Banco de Dados, Redes, Segurança Cibernética, etc.">Study Systems Development, Database Management, Networking, Cybersecurity, etc.</p>
+                        <h3 class="mb-0" data-en="IT Support Technician" data-pt="Técnico em Suporte de TI">IT Support Technician</h3>
+                        <div class="subheading mb-3" data-en="SENAC" data-pt="SENAC">SENAC</div>
+                        <p data-en="Technical skills acquired:" data-pt="Habilidades técnicas adquiridas:">Technical skills acquired:</p>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Installation and management of client operating systems, software applications, utilities, and common peripherals, as well as data storage devices for automating commercial routines." data-pt="Instalação e gerenciamento de sistemas operacionais de clientes, aplicativos de software, utilitários e periféricos comuns, além de dispositivos de armazenamento de dados para automação de rotinas comerciais.">Installation and management of client operating systems, software applications, utilities, and common peripherals, as well as data storage devices for automating commercial routines.</span>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Defining technical specifications, setting up systems, and troubleshooting issues in microcomputers and peripherals." data-pt="Definição de especificações técnicas, configuração de sistemas e solução de problemas em microcomputadores e periféricos.">Defining technical specifications, setting up systems, and troubleshooting issues in microcomputers and peripherals.</span>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Designing and installing physical computer networks." data-pt="Projetar e instalar redes físicas de computadores.">Designing and installing physical computer networks.</span>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Configuring and managing logical computer networks, ensuring optimal operation and resource management." data-pt="Configuração e gerenciamento de redes lógicas de computadores, garantindo o funcionamento ideal e a gestão de recursos.">Configuring and managing logical computer networks, ensuring optimal operation and resource management.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary" data-en="September 2013 - November 2014" data-pt="Setembro de 2013 - Novembro de 2014">September 2013 - November 2014</span></div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0" data-en="Information Systems - Bachelor's Degree" data-pt="Sistema da Informação - Bacharelado">Information Systems - Bachelor's Degree</h3>
+                        <div class="subheading mb-3" data-en="Estácio de Sá University" data-pt="Universidade Estácio de Sá">Estácio de Sá University</div>
+                        <p data-en="Core competencies developed:" data-pt="Competências desenvolvidas:">Core competencies developed:</p>
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Systems Development, including software engineering principles and methodologies." data-pt="Desenvolvimento de Sistemas, incluindo princípios e metodologias de engenharia de software.">Systems Development, including software engineering principles and methodologies.</span>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Database Management, covering database design, implementation, and administration." data-pt="Gestão de Banco de Dados, cobrindo design, implementação e administração de bancos de dados.">Database Management, covering database design, implementation, and administration.</span>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Networking, with a focus on the design, configuration, and maintenance of network infrastructures." data-pt="Redes, com foco no design, configuração e manutenção de infraestruturas de rede.">Networking, with a focus on the design, configuration, and maintenance of network infrastructures.</span>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Cybersecurity, emphasizing the protection of data and systems from threats and vulnerabilities." data-pt="Segurança Cibernética, enfatizando a proteção de dados e sistemas contra ameaças e vulnerabilidades.">Cybersecurity, emphasizing the protection of data and systems from threats and vulnerabilities.</span>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="IT Governance, ensuring that IT strategies align with business objectives." data-pt="Governança de TI, garantindo que as estratégias de TI estejam alinhadas com os objetivos do negócio.">IT Governance, ensuring that IT strategies align with business objectives.</span>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Cloud Computing, exploring deployment models, service models, and cloud architectures." data-pt="Computação em Nuvem, explorando modelos de implantação, modelos de serviço e arquiteturas de nuvem.">Cloud Computing, exploring deployment models, service models, and cloud architectures.</span>
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check"></i></span>
+                                <span data-en="Business Intelligence and Data Analytics, enabling data-driven decision-making through analysis and visualization." data-pt="Business Intelligence e Análise de Dados, permitindo a tomada de decisões baseada em dados através de análise e visualização.">Business Intelligence and Data Analytics, enabling data-driven decision-making through analysis and visualization.</span>
+                            </li>
+                        </ul>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary" data-en="February 2021 - Present" data-pt="Fevereiro de 2021 - Presente">February 2021 - Present</span></div>
                 </div>
             </div>
+                     
         </section>
         <hr class="m-0" />
         <!-- Skills -->
@@ -122,7 +275,87 @@
                 </ul>
             </div>
         </section>
+        <hr class="m-0" />
+<!-- Projects -->
+<section class="resume-section" id="Projects">
+    <div class="resume-section-content">
+        <h2 class="mb-5" data-en="Projects" data-pt="Projetos">Projects</h2>
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Projeto 1 -->
+                <div class="col-md-3">
+                    <div class="project-item d-flex flex-column">
+                        <div class="project-image">
+                            <img src="assets/img/wheather_&_time.JPG" alt="Project Image 1" class="img-fluid">
+                        </div>
+                        <div class="project-details flex-grow-1 d-flex flex-column">
+                            <h3 class="mb-0" data-en="Web App" data-pt="Web App">Web App</h3>
+                            <p data-en="A web application that provides the current temperature for any location entered by the user." data-pt="Um aplicativo web que informa a temperatura atual para qualquer localidade digitada pelo usuário.">
+                                A web application that provides the current temperature for any location entered by the user.
+                            </p>
+                            <p class="text-warning" data-en="Currently in development." data-pt="Atualmente em desenvolvimento.">Currently in development.</p>
+                            <a href="https://weather-and-time.vercel.app/" class="btn btn-primary mt-auto" data-en="View Project" data-pt="Ver Projeto" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="col-md-3">
+                    <div class="project-item d-flex flex-column">
+                        <div class="project-image">
+                            <img src="assets/img/eniac_solutions.JPG" alt="Project Image 2" class="img-fluid">
+                        </div>
+                        <div class="project-details flex-grow-1 d-flex flex-column">
+                            <h3 class="mb-0" data-en="E-commerce Website" data-pt="Site de E-commerce">E-commerce Website</h3>
+                            <p data-en="An online store with features for browsing products, adding them to a cart, and checking out." data-pt="Uma loja online com recursos para navegar pelos produtos, adicioná-los ao carrinho e finalizar a compra.">
+                                An online store with features for browsing products, adding them to a cart, and checking out.
+                            </p>
+                            <p class="text-warning" data-en="Currently in development." data-pt="Atualmente em desenvolvimento.">Currently in development.</p>
+                            <a href="https://criando-um-site-com-o-bootstrap.netlify.app/" class="btn btn-primary mt-auto" data-en="View Project" data-pt="Ver Projeto" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="col-md-3">
+                    <div class="project-item d-flex flex-column">
+                        <div class="project-image">
+                            <img src="assets/img/restautant_website.JPG" alt="Project Image 3" class="img-fluid">
+                        </div>
+                        <div class="project-details flex-grow-1 d-flex flex-column">
+                            <h3 class="mb-0" data-en="Restaurant Website" data-pt="Site de Restaurante">Restaurant Website</h3>
+                            <p data-en="A website for a restaurant with features for menu display, reservations, and contact information." data-pt="Um site para um restaurante com recursos para exibição do menu, reservas e informações de contato.">
+                                A website for a restaurant with features for menu display, reservations, and contact information.
+                            </p>
+                            <p class="text-warning" data-en="Currently in development." data-pt="Atualmente em desenvolvimento.">Currently in development.</p>
+                            <a href="https://projeto-site-de-restauarante.netlify.app/" class="btn btn-primary mt-auto" data-en="View Project" data-pt="Ver Projeto" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projeto 4 -->
+                <div class="col-md-3">
+                    <div class="project-item d-flex flex-column">
+                        <div class="project-image">
+                            <img src="assets/img/video_game_catalog.JPG" alt="Project Image 4" class="img-fluid">
+                        </div>
+                        <div class="project-details flex-grow-1 d-flex flex-column">
+                            <h3 class="mb-0" data-en="Restaurant Website" data-pt="Site de Restaurante">Video Game Catalog</h3>
+                            <p data-en="A website for a catalog of video games." data-pt="Um site para  um catálogo de jogos de videogame.">
+                                A website for a catalog of video games.
+                            </p>
+                            
+                            <p class="text-warning" data-en="Currently in development." data-pt="Atualmente em desenvolvimento.">Currently in development.</p>
+                            <a href="https://catalogodejogos.netlify.app/" class="btn btn-primary mt-auto" data-en="View Project" data-pt="Ver Projeto" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+
     <!-- Core theme JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -41,30 +41,3 @@
     });
 })(jQuery); // End of use strict
 
-
-function toggleLanguage() {
-    const elementsEn = document.querySelectorAll('[data-lang="en"]');
-    const elementsPt = document.querySelectorAll('[data-lang="pt"]');
-    const currentLang = document.documentElement.lang;
-
-    if (currentLang === "en") {
-        // Switch to Portuguese
-        document.documentElement.lang = "pt";
-        elementsEn.forEach(element => element.style.display = "none");
-        elementsPt.forEach(element => element.style.display = "block");
-        document.getElementById('toggleLang').innerText = "Switch to English";
-    } else {
-        // Switch to English
-        document.documentElement.lang = "en";
-        elementsEn.forEach(element => element.style.display = "block");
-        elementsPt.forEach(element => element.style.display = "none");
-        document.getElementById('toggleLang').innerText = "Switch to Portuguese";
-    }
-}
-
-// Initialize the page with English content
-document.addEventListener('DOMContentLoaded', () => {
-    const elementsPt = document.querySelectorAll('[data-lang="pt"]');
-    elementsPt.forEach(element => element.style.display = "none");
-});
-
