@@ -331,545 +331,610 @@ fieldset {
 }
 
 
+/* Style for <legend> elements, typically used in <fieldset> */
 legend {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  padding: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  line-height: inherit;
-  color: inherit;
-  white-space: normal;
+  display: block; /* Make <legend> a block-level element */
+  width: 100%; /* Full width of its container */
+  max-width: 100%; /* Prevent exceeding container width */
+  padding: 0; /* Remove padding */
+  margin-bottom: 0.5rem; /* Space below <legend> */
+  font-size: 1.5rem; /* Font size for <legend> */
+  line-height: inherit; /* Inherit line height from parent */
+  color: inherit; /* Inherit text color from parent */
+  white-space: normal; /* Allow text to wrap */
 }
 
+/* Style for <progress> elements */
 progress {
-  vertical-align: baseline;
+  vertical-align: baseline; /* Align with the baseline of text */
 }
 
+/* Remove spinner buttons in number inputs for WebKit browsers */
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
-  height: auto;
+  height: auto; /* Auto height for spin buttons */
 }
 
+/* Remove default styling for search inputs in WebKit browsers */
 [type=search] {
-  outline-offset: -2px;
-  -webkit-appearance: none;
+  outline-offset: -2px; /* Adjust the outline offset */
+  -webkit-appearance: none; /* Remove default styling */
 }
 
+/* Remove search decoration in search inputs for WebKit browsers */
 [type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* Remove default search decoration */
 }
 
+/* Style for file upload button in WebKit browsers */
 ::-webkit-file-upload-button {
-  font: inherit;
-  -webkit-appearance: button;
+  font: inherit; /* Inherit font from parent */
+  -webkit-appearance: button; /* Use default button styling */
 }
 
+/* Style for <output> elements */
 output {
-  display: inline-block;
+  display: inline-block; /* Display as inline-block */
 }
 
+/* Style for <summary> elements, used in <details> */
 summary {
-  display: list-item;
-  cursor: pointer;
+  display: list-item; /* Display as a list item */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
 
+/* Hide <template> elements */
 template {
-  display: none;
+  display: none; /* Do not display <template> elements */
 }
 
+/* Hide elements with [hidden] attribute */
 [hidden] {
-  display: none !important;
+  display: none !important; /* Forcefully hide elements with [hidden] attribute */
 }
 
+/* Style for headings (h1 to h6) and corresponding classes (.h1 to .h6) */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  line-height: 1.2;
-  color: #343a40;
+  margin-bottom: 0.5rem; /* Space below headings */
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Font family for headings */
+  font-weight: 700; /* Bold font weight */
+  line-height: 1.2; /* Line height for better readability */
+  color: #343a40; /* Text color */
 }
 
+/* Style for h1 and .h1 */
 h1, .h1 {
-  font-size: 6rem;
+  font-size: 6rem; /* Font size for h1 and .h1 */
 }
 
+/* Style for h2 and .h2 */
 h2, .h2 {
-  font-size: 3.5rem;
+  font-size: 3.5rem; /* Font size for h2 and .h2 */
 }
 
+/* Style for h3 and .h3 */
 h3, .h3 {
-  font-size: 2rem;
+  font-size: 2rem; /* Font size for h3 and .h3 */
 }
 
+/* Style for h4 and .h4 */
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Font size for h4 and .h4 */
 }
 
+/* Style for h5 and .h5 */
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* Font size for h5 and .h5 */
 }
 
+/* Style for h6 and .h6 */
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1rem; /* Font size for h6 and .h6 */
 }
 
+/* Style for lead text */
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1.25rem; /* Font size for lead text */
+  font-weight: 300; /* Light font weight */
 }
 
+/* Style for display headings (display-1 to display-4) */
 .display-1 {
-  font-size: 6rem;
-  font-weight: 300;
-  line-height: 1.2;
+  font-size: 6rem; /* Font size for display-1 */
+  font-weight: 300; /* Light font weight */
+  line-height: 1.2; /* Line height for better readability */
 }
 
 .display-2 {
-  font-size: 5.5rem;
-  font-weight: 300;
-  line-height: 1.2;
+  font-size: 5.5rem; /* Font size for display-2 */
+  font-weight: 300; /* Light font weight */
+  line-height: 1.2; /* Line height for better readability */
 }
 
 .display-3 {
-  font-size: 4.5rem;
-  font-weight: 300;
-  line-height: 1.2;
+  font-size: 4.5rem; /* Font size for display-3 */
+  font-weight: 300; /* Light font weight */
+  line-height: 1.2; /* Line height for better readability */
 }
 
 .display-4 {
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
+  font-size: 3.5rem; /* Font size for display-4 */
+  font-weight: 300; /* Light font weight */
+  line-height: 1.2; /* Line height for better readability */
 }
 
+/* Style for horizontal rules */
 hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 1rem; /* Space above the horizontal rule */
+  margin-bottom: 1rem; /* Space below the horizontal rule */
+  border: 0; /* Remove border */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Add a top border with light color */
 }
 
+/* Style for small text */
 small,
 .small {
-  font-size: 80%;
-  font-weight: 400;
+  font-size: 80%; /* Font size for small text */
+  font-weight: 400; /* Normal font weight */
 }
 
+/* Style for <mark> elements and .mark class */
 mark,
 .mark {
-  padding: 0.2em;
-  background-color: #fcf8e3;
+  padding: 0.2em; /* Padding around the text */
+  background-color: #fcf8e3; /* Light yellow background color */
 }
 
+/* Style for lists with no style */
 .list-unstyled {
-  padding-left: 0;
-  list-style: none;
+  padding-left: 0; /* Remove padding on the left */
+  list-style: none; /* Remove default list styling */
 }
 
+/* Style for inline lists */
 .list-inline {
-  padding-left: 0;
-  list-style: none;
+  padding-left: 0; /* Remove padding on the left */
+  list-style: none; /* Remove default list styling */
 }
 
+/* Style for inline list items */
 .list-inline-item {
-  display: inline-block;
+  display: inline-block; /* Display list items inline */
 }
+
+/* Margin between inline list items, except the last one */
 .list-inline-item:not(:last-child) {
-  margin-right: 0.5rem;
+  margin-right: 0.5rem; /* Space to the right of each item */
 }
 
+/* Style for initialism text (abbreviations) */
 .initialism {
-  font-size: 90%;
-  text-transform: uppercase;
+  font-size: 90%; /* Smaller font size for initialism */
+  text-transform: uppercase; /* Uppercase text */
 }
 
+/* Style for blockquotes */
 .blockquote {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
+  margin-bottom: 1rem; /* Space below the blockquote */
+  font-size: 1.25rem; /* Larger font size */
 }
 
+/* Style for blockquote footer */
 .blockquote-footer {
-  display: block;
-  font-size: 80%;
-  color: #6c757d;
+  display: block; /* Display as a block element */
+  font-size: 80%; /* Smaller font size */
+  color: #6c757d; /* Gray color */
 }
+
+/* Add a dash before the blockquote footer */
 .blockquote-footer::before {
-  content: "— ";
+  content: "— "; /* Dash character */
 }
 
+/* Style for responsive images */
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Ensure image doesn't exceed its container's width */
+  height: auto; /* Maintain aspect ratio */
 }
 
+/* Style for image thumbnails */
 .img-thumbnail {
-  padding: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
-  max-width: 100%;
-  height: auto;
+  padding: 0.25rem; /* Padding inside the thumbnail */
+  background-color: #fff; /* White background color */
+  border: 1px solid #dee2e6; /* Light gray border */
+  border-radius: 0.25rem; /* Rounded corners */
+  max-width: 100%; /* Ensure image doesn't exceed its container's width */
+  height: auto; /* Maintain aspect ratio */
 }
 
+/* Style for figures (images with captions) */
 .figure {
-  display: inline-block;
+  display: inline-block; /* Display as inline-block */
 }
 
+/* Style for images inside figures */
 .figure-img {
-  margin-bottom: 0.5rem;
-  line-height: 1;
+  margin-bottom: 0.5rem; /* Space below the image */
+  line-height: 1; /* Set line height to 1 for the image */
 }
 
+/* Style for captions of figures */
 .figure-caption {
-  font-size: 90%;
-  color: #6c757d;
+  font-size: 90%; /* Slightly smaller font size */
+  color: #6c757d; /* Gray color */
 }
 
+/* Style for code elements */
 code {
-  font-size: 87.5%;
-  color: #e83e8c;
-  word-wrap: break-word;
+  font-size: 87.5%; /* Slightly smaller font size for code */
+  color: #e83e8c; /* Pink color for code text */
+  word-wrap: break-word; /* Allow code to wrap onto the next line if too long */
 }
+
+/* Style for code inside links */
 a > code {
-  color: inherit;
+  color: inherit; /* Inherit color from the parent link */
 }
 
+/* Style for keyboard elements */
 kbd {
-  padding: 0.2rem 0.4rem;
-  font-size: 87.5%;
-  color: #fff;
-  background-color: #212529;
-  border-radius: 0.2rem;
+  padding: 0.2rem 0.4rem; /* Padding around keyboard input */
+  font-size: 87.5%; /* Slightly smaller font size */
+  color: #fff; /* White text color */
+  background-color: #212529; /* Dark background color */
+  border-radius: 0.2rem; /* Slightly rounded corners */
 }
+
+/* Style for nested keyboard elements */
 kbd kbd {
-  padding: 0;
-  font-size: 100%;
-  font-weight: 700;
+  padding: 0; /* Remove padding for nested kbd elements */
+  font-size: 100%; /* Default font size */
+  font-weight: 700; /* Bold text */
 }
 
+/* Style for preformatted text blocks */
 pre {
-  display: block;
-  font-size: 87.5%;
-  color: #212529;
+  display: block; /* Display preformatted text as a block element */
+  font-size: 87.5%; /* Slightly smaller font size */
+  color: #212529; /* Dark color for text */
 }
+
+/* Style for code inside preformatted text blocks */
 pre code {
-  font-size: inherit;
-  color: inherit;
-  word-break: normal;
+  font-size: inherit; /* Inherit font size from the pre element */
+  color: inherit; /* Inherit color from the pre element */
+  word-break: normal; /* Default word breaking */
 }
 
+/* Style for scrollable preformatted text blocks */
 .pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
+  max-height: 340px; /* Maximum height of 340px */
+  overflow-y: scroll; /* Add vertical scroll if content overflows */
 }
 
+/* Basic container styles */
 .container {
-  width: 100%;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%; /* Full width of the parent element */
+  padding-right: 0.75rem; /* Padding on the right */
+  padding-left: 0.75rem; /* Padding on the left */
+  margin-right: auto; /* Center horizontally */
+  margin-left: auto; /* Center horizontally */
 }
+
+/* Responsive container widths */
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: 540px; /* Maximum width for small screens */
   }
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 720px; /* Maximum width for medium screens */
   }
 }
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 960px; /* Maximum width for large screens */
   }
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1140px; /* Maximum width for extra-large screens */
   }
 }
 
+/* Styles for fluid and responsive containers */
 .container-fluid, .container-xl, .container-lg, .container-md, .container-sm {
-  width: 100%;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%; /* Full width of the parent element */
+  padding-right: 0.75rem; /* Padding on the right */
+  padding-left: 0.75rem; /* Padding on the left */
+  margin-right: auto; /* Center horizontally */
+  margin-left: auto; /* Center horizontally */
 }
 
+/* Responsive container widths for different sizes */
 @media (min-width: 576px) {
   .container-sm, .container {
-    max-width: 540px;
+    max-width: 540px; /* Maximum width for small screens */
   }
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
-    max-width: 720px;
+    max-width: 720px; /* Maximum width for medium screens */
   }
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
+    max-width: 960px; /* Maximum width for large screens */
   }
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
+    max-width: 1140px; /* Maximum width for extra-large screens */
   }
 }
+/* Style for rows in a flexbox container */
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -0.75rem;
-  margin-left: -0.75rem;
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  margin-right: -0.75rem; /* Negative margin to offset padding */
+  margin-left: -0.75rem; /* Negative margin to offset padding */
 }
 
+/* Remove gutters (spacing) between columns */
 .no-gutters {
-  margin-right: 0;
-  margin-left: 0;
+  margin-right: 0; /* Remove right margin */
+  margin-left: 0; /* Remove left margin */
 }
+
+/* Remove padding from columns inside no-gutters container */
 .no-gutters > .col,
 .no-gutters > [class*=col-] {
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 0; /* Remove right padding */
+  padding-left: 0; /* Remove left padding */
 }
 
+/* Styles for different column sizes and breakpoints */
 .col-xl,
 .col-xl-auto, .col-xl-12, .col-xl-11, .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg,
 .col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md,
 .col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm,
 .col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col,
 .col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
-  position: relative;
-  width: 100%;
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  position: relative; /* Position relative for positioning child elements */
+  width: 100%; /* Full width of the parent container */
+  padding-right: 0.75rem; /* Padding on the right */
+  padding-left: 0.75rem; /* Padding on the left */
 }
 
+/* General column styles */
 .col {
-  flex-basis: 0;
-  flex-grow: 1;
-  min-width: 0;
-  max-width: 100%;
+  flex-basis: 0; /* Initial size of flex item */
+  flex-grow: 1; /* Allow columns to grow and fill the space */
+  min-width: 0; /* Prevent columns from shrinking below their content size */
+  max-width: 100%; /* Limit maximum width to 100% of parent */
 }
 
+/* Styles for rows with a specific number of columns */
 .row-cols-1 > * {
-  flex: 0 0 100%;
-  max-width: 100%;
+  flex: 0 0 100%; /* Flex basis of 100% for full-width columns */
+  max-width: 100%; /* Maximum width of 100% */
 }
 
 .row-cols-2 > * {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 50%; /* Flex basis of 50% for half-width columns */
+  max-width: 50%; /* Maximum width of 50% */
 }
 
 .row-cols-3 > * {
-  flex: 0 0 33.3333333333%;
-  max-width: 33.3333333333%;
+  flex: 0 0 33.3333333333%; /* Flex basis of 33.33% for one-third width columns */
+  max-width: 33.3333333333%; /* Maximum width of 33.33% */
 }
 
 .row-cols-4 > * {
-  flex: 0 0 25%;
-  max-width: 25%;
+  flex: 0 0 25%; /* Flex basis of 25% for one-quarter width columns */
+  max-width: 25%; /* Maximum width of 25% */
 }
 
 .row-cols-5 > * {
-  flex: 0 0 20%;
-  max-width: 20%;
+  flex: 0 0 20%; /* Flex basis of 20% for one-fifth width columns */
+  max-width: 20%; /* Maximum width of 20% */
 }
-
+/* Styles for rows with six columns */
 .row-cols-6 > * {
-  flex: 0 0 16.6666666667%;
-  max-width: 16.6666666667%;
+  flex: 0 0 16.6666666667%; /* Flex basis of 16.67% for one-sixth width columns */
+  max-width: 16.6666666667%; /* Maximum width of 16.67% */
 }
 
+/* Column with automatic width */
 .col-auto {
-  flex: 0 0 auto;
-  width: auto;
-  max-width: 100%;
+  flex: 0 0 auto; /* Auto width based on content */
+  width: auto; /* Auto width */
+  max-width: 100%; /* Limit maximum width to 100% of parent */
 }
 
+/* Styles for columns with specific widths */
 .col-1 {
-  flex: 0 0 8.3333333333%;
-  max-width: 8.3333333333%;
+  flex: 0 0 8.3333333333%; /* Flex basis of 8.33% for one-twelfth width columns */
+  max-width: 8.3333333333%; /* Maximum width of 8.33% */
 }
 
 .col-2 {
-  flex: 0 0 16.6666666667%;
-  max-width: 16.6666666667%;
+  flex: 0 0 16.6666666667%; /* Flex basis of 16.67% for one-sixth width columns */
+  max-width: 16.6666666667%; /* Maximum width of 16.67% */
 }
 
 .col-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
+  flex: 0 0 25%; /* Flex basis of 25% for one-fourth width columns */
+  max-width: 25%; /* Maximum width of 25% */
 }
 
 .col-4 {
-  flex: 0 0 33.3333333333%;
-  max-width: 33.3333333333%;
+  flex: 0 0 33.3333333333%; /* Flex basis of 33.33% for one-third width columns */
+  max-width: 33.3333333333%; /* Maximum width of 33.33% */
 }
 
 .col-5 {
-  flex: 0 0 41.6666666667%;
-  max-width: 41.6666666667%;
+  flex: 0 0 41.6666666667%; /* Flex basis of 41.67% for five-twelfths width columns */
+  max-width: 41.6666666667%; /* Maximum width of 41.67% */
 }
 
 .col-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 50%; /* Flex basis of 50% for half-width columns */
+  max-width: 50%; /* Maximum width of 50% */
 }
 
 .col-7 {
-  flex: 0 0 58.3333333333%;
-  max-width: 58.3333333333%;
+  flex: 0 0 58.3333333333%; /* Flex basis of 58.33% for seven-twelfths width columns */
+  max-width: 58.3333333333%; /* Maximum width of 58.33% */
 }
 
 .col-8 {
-  flex: 0 0 66.6666666667%;
-  max-width: 66.6666666667%;
+  flex: 0 0 66.6666666667%; /* Flex basis of 66.67% for two-thirds width columns */
+  max-width: 66.6666666667%; /* Maximum width of 66.67% */
 }
 
 .col-9 {
-  flex: 0 0 75%;
-  max-width: 75%;
+  flex: 0 0 75%; /* Flex basis of 75% for three-fourths width columns */
+  max-width: 75%; /* Maximum width of 75% */
 }
 
 .col-10 {
-  flex: 0 0 83.3333333333%;
-  max-width: 83.3333333333%;
+  flex: 0 0 83.3333333333%; /* Flex basis of 83.33% for ten-twelfths width columns */
+  max-width: 83.3333333333%; /* Maximum width of 83.33% */
 }
 
 .col-11 {
-  flex: 0 0 91.6666666667%;
-  max-width: 91.6666666667%;
+  flex: 0 0 91.6666666667%; /* Flex basis of 91.67% for eleven-twelfths width columns */
+  max-width: 91.6666666667%; /* Maximum width of 91.67% */
 }
 
 .col-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
+  flex: 0 0 100%; /* Flex basis of 100% for full-width columns */
+  max-width: 100%; /* Maximum width of 100% */
 }
 
+/* Styles for column ordering */
 .order-first {
-  order: -1;
+  order: -1; /* Order column first */
 }
 
 .order-last {
-  order: 13;
+  order: 13; /* Order column last */
 }
 
 .order-0 {
-  order: 0;
+  order: 0; /* Default order */
 }
 
 .order-1 {
-  order: 1;
+  order: 1; /* Order column first */
 }
 
 .order-2 {
-  order: 2;
+  order: 2; /* Order column second */
 }
 
 .order-3 {
-  order: 3;
+  order: 3; /* Order column third */
 }
 
 .order-4 {
-  order: 4;
+  order: 4; /* Order column fourth */
 }
 
 .order-5 {
-  order: 5;
+  order: 5; /* Order column fifth */
 }
 
 .order-6 {
-  order: 6;
+  order: 6; /* Order column sixth */
 }
 
 .order-7 {
-  order: 7;
+  order: 7; /* Order column seventh */
 }
 
 .order-8 {
-  order: 8;
+  order: 8; /* Order column eighth */
 }
 
 .order-9 {
-  order: 9;
+  order: 9; /* Order column ninth */
 }
 
 .order-10 {
-  order: 10;
+  order: 10; /* Order column tenth */
 }
 
 .order-11 {
-  order: 11;
+  order: 11; /* Order column eleventh */
 }
 
 .order-12 {
-  order: 12;
+  order: 12; /* Order column twelfth */
 }
 
+/* Offset styles to push columns to the right */
 .offset-1 {
-  margin-left: 8.3333333333%;
+  margin-left: 8.3333333333%; /* Left margin of 8.33% for offsetting */
 }
 
 .offset-2 {
-  margin-left: 16.6666666667%;
+  margin-left: 16.6666666667%; /* Left margin of 16.67% for offsetting */
 }
 
 .offset-3 {
-  margin-left: 25%;
+  margin-left: 25%; /* Left margin of 25% for offsetting */
 }
 
 .offset-4 {
-  margin-left: 33.3333333333%;
+  margin-left: 33.3333333333%; /* Left margin of 33.33% for offsetting */
 }
 
 .offset-5 {
-  margin-left: 41.6666666667%;
+  margin-left: 41.6666666667%; /* Left margin of 41.67% for offsetting */
 }
 
 .offset-6 {
-  margin-left: 50%;
+  margin-left: 50%; /* Left margin of 50% for offsetting */
 }
 
 .offset-7 {
-  margin-left: 58.3333333333%;
+  margin-left: 58.3333333333%; /* Left margin of 58.33% for offsetting */
 }
 
 .offset-8 {
-  margin-left: 66.6666666667%;
+  margin-left: 66.6666666667%; /* Left margin of 66.67% for offsetting */
 }
 
 .offset-9 {
-  margin-left: 75%;
+  margin-left: 75%; /* Left margin of 75% for offsetting */
 }
 
 .offset-10 {
-  margin-left: 83.3333333333%;
+  margin-left: 83.3333333333%; /* Left margin of 83.33% for offsetting */
 }
 
 .offset-11 {
-  margin-left: 91.6666666667%;
+  margin-left: 91.6666666667%; /* Left margin of 91.67% for offsetting */
 }
 
+/* Styles for columns in small devices */
 @media (min-width: 576px) {
   .col-sm {
-    flex-basis: 0;
-    flex-grow: 1;
-    min-width: 0;
-    max-width: 100%;
+    flex-basis: 0; /* Initial size of flex item */
+    flex-grow: 1; /* Allow columns to grow and fill space */
+    min-width: 0; /* Prevent columns from shrinking below content size */
+    max-width: 100%; /* Limit maximum width to 100% of parent */
   }
 
   .row-cols-sm-1 > * {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 100%; /* Flex basis of 100% for full-width columns */
+    max-width: 100%; /* Maximum width of 100% */
   }
+}
 
   .row-cols-sm-2 > * {
     flex: 0 0 50%;
