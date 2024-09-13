@@ -14,72 +14,20 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" /> 
-    <style>
-        .carousel-item {
-            position: relative;
-        }
-        
-        .carousel-item img {
-            width: 100%;
-            height: 400px; /* Ajuste conforme necessário */
-            object-fit: cover;
-            display: block; /* Garante que a imagem se comporte como um bloco */
-            filter: brightness(50%); /* Efeito desbotado na imagem */
-        }
-        
-        .carousel-item::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Cor de fundo semi-transparente para criar efeito translúcido */
-            z-index: 1; /* Garante que o pseudo-elemento fique acima da imagem */
-        }
-        
-        .carousel-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente para a legenda */
-            color: whitesmoke; /* Cor do texto da legenda */
-            border-top-left-radius: 10px; /* Arredonda apenas o canto superior esquerdo */
-            border-top-right-radius: 10px; /* Arredonda apenas o canto superior direito */
-            text-align: center; /* Centraliza o texto */
-            z-index: 2; /* Garante que o texto fique acima da sobreposição */
-        }
-        
-        .carousel-caption h3 {
-            color: whitesmoke; /* Cor para o título da descrição */
-            margin-top: 0;
-        }
-        
-        .carousel-caption p {
-            color: whitesmoke; /* Cor para o texto da descrição */
-            margin-bottom: 10px;
-        }
-        
-        .carousel-caption a {
-            margin-top: 10px;
-        }
-        
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: rgba(0, 0, 0, 0.719); /* Cor de fundo para os ícones de controle */
-        }
-        
-    </style>
-    
+    <!-- Custom CSS for Dark/Light Mode -->
+    <link href="css/theme-toggle.css" rel="stylesheet" />   
 </head>
 
 <body id="page-top">
+    <!-- Dark/Light Mode Toggle Button -->
+    <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
     <!-- Botão de troca de idioma -->
     <button id="languageSwitcher">EN</button>
 
-    <!-- Navigation-->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">Julio Cesar Santos</span>
@@ -96,10 +44,11 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Experience" data-en="Experience" data-pt="Experiência">Experience</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Education" data-en="Education" data-pt="Educação">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Skills" data-en="Skills" data-pt="Habilidades">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Projects" data-en="Projects" data-pt="Projetos">Projetos</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Projects" data-en="Projects" data-pt="Projetos">Projects</a></li>
             </ul>
         </div>
     </nav>
+
     <!-- Page Content-->
     <div class="container-fluid p-0">
         <!-- About Me -->
@@ -361,6 +310,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/theme-toggle.js"></script>
     <script>
         // Função para trocar o idioma
         document.getElementById('languageSwitcher').addEventListener('click', function() {
