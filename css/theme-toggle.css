@@ -1,37 +1,123 @@
-/* Button to toggle dark/light mode */
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
+/* 
+Esse código CSS define o estilo de um botão flutuante que alterna entre o modo claro e escuro em uma página web.
+ Ele usa ícones para mostrar a lua (no modo claro) e o sol (no modo escuro), trocando suas aparências e cores conforme o tema da página muda.
+ */
+
+/*Adicionando variáveis de Cor*/
+ :root {
+    --background-color: whitesmoke;
+    --text-color: #000000;
+}
+
+body.dark-mode {
+    --background-color: #333333;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+/*Elementos principais*/
+
+nav {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* style.css */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+button {
+    margin: 20px;
     padding: 10px;
+    font-size: 16px;
+}
+
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+/* Botão para alternar entre os modos escuro/claro */
+.theme-toggle {
+    /* Define o botão como posição fixa, sempre visível na tela */
+    position: left;
+
+    /* Define a posição do botão a 20px do topo */
+    top: 20px;
+
+    /* Centraliza o botão horizontalmente */
+    left: 50%;
+
+    /* Move o botão 50% de sua largura para a esquerda, para centralização exata */
+    transform: translateX(-50%);
+
+    /* Cor de fundo do botão no modo claro */
+    background-color: #fff;
+
+    /* Remove as bordas do botão */
+    border: none;
+
+    /* Define o botão com bordas arredondadas */
+    border-radius: 50%;
+
+    /* Define o preenchimento interno do botão */
+    padding: 10px;
+
+    /* Adiciona uma sombra ao redor do botão */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* Define o cursor como uma mão (indicando que o botão é clicável) */
     cursor: pointer;
+
+    /* Define a sobreposição do botão sobre outros elementos da página */
     z-index: 999;
+
+    /* Transições suaves para a cor de fundo e cor de texto quando alternado */
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Estiliza o ícone dentro do botão */
 .theme-toggle i {
+    /* Cor do ícone no modo claro */
     color: #333;
+
+    /* Tamanho da fonte do ícone */
     font-size: 20px;
 }
 
+/* Ícone do sol (usado no modo claro), oculto por padrão */
 .theme-toggle .fa-sun {
     display: none;
 }
 
+/* Quando o corpo estiver no modo escuro, altere as cores do botão */
 body.dark-mode .theme-toggle {
+    /* Cor de fundo do botão no modo escuro */
     background-color: #333;
+
+    /* Cor do texto no modo escuro */
     color: #fff;
 }
 
+/* Quando o corpo estiver no modo escuro, mostre o ícone do sol */
 body.dark-mode .theme-toggle .fa-sun {
     display: inline;
 }
 
+/* Quando o corpo estiver no modo escuro, oculte o ícone da lua */
 body.dark-mode .theme-toggle .fa-moon {
     display: none;
 }
