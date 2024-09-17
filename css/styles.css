@@ -46,18 +46,20 @@ Declaring variables
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* Monospace font stack */
 }
  /* Style for the language switch button */
-        #languageSwitcher {
-          position: fixed;
-          top: 10px;
-          right: 10px;
-          z-index: 1000;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          padding: 10px 20px;
-          cursor: pointer;
-          border-radius: 5px;
-      }
+/* Style for the language switch button */
+#languageSwitcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 /* Projects Section */
 .carousel-item {
   position: relative;
@@ -993,237 +995,438 @@ pre code {
   }
 }
 
-  .row-cols-sm-2 > * {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .row-cols-sm-3 > * {
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
-  }
-
-  .row-cols-sm-4 > * {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-
-  .row-cols-sm-5 > * {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-
-  .row-cols-sm-6 > * {
-    flex: 0 0 16.6666666667%;
-    max-width: 16.6666666667%;
-  }
-
-  .col-sm-auto {
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 100%;
-  }
-
-  .col-sm-1 {
-    flex: 0 0 8.3333333333%;
-    max-width: 8.3333333333%;
-  }
-
-  .col-sm-2 {
-    flex: 0 0 16.6666666667%;
-    max-width: 16.6666666667%;
-  }
-
-  .col-sm-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-
-  .col-sm-4 {
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
-  }
-
-  .col-sm-5 {
-    flex: 0 0 41.6666666667%;
-    max-width: 41.6666666667%;
-  }
-
-  .col-sm-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .col-sm-7 {
-    flex: 0 0 58.3333333333%;
-    max-width: 58.3333333333%;
-  }
-
-  .col-sm-8 {
-    flex: 0 0 66.6666666667%;
-    max-width: 66.6666666667%;
-  }
-
-  .col-sm-9 {
-    flex: 0 0 75%;
-    max-width: 75%;
-  }
-
-  .col-sm-10 {
-    flex: 0 0 83.3333333333%;
-    max-width: 83.3333333333%;
-  }
-
-  .col-sm-11 {
-    flex: 0 0 91.6666666667%;
-    max-width: 91.6666666667%;
-  }
-
-  .col-sm-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .order-sm-first {
-    order: -1;
-  }
-
-  .order-sm-last {
-    order: 13;
-  }
-
-  .order-sm-0 {
-    order: 0;
-  }
-
-  .order-sm-1 {
-    order: 1;
-  }
-
-  .order-sm-2 {
-    order: 2;
-  }
-
-  .order-sm-3 {
-    order: 3;
-  }
-
-  .order-sm-4 {
-    order: 4;
-  }
-
-  .order-sm-5 {
-    order: 5;
-  }
-
-  .order-sm-6 {
-    order: 6;
-  }
-
-  .order-sm-7 {
-    order: 7;
-  }
-
-  .order-sm-8 {
-    order: 8;
-  }
-
-  .order-sm-9 {
-    order: 9;
-  }
-
-  .order-sm-10 {
-    order: 10;
-  }
-
-  .order-sm-11 {
-    order: 11;
-  }
-
-  .order-sm-12 {
-    order: 12;
-  }
-
-  .offset-sm-0 {
-    margin-left: 0;
-  }
-
-  .offset-sm-1 {
-    margin-left: 8.3333333333%;
-  }
-
-  .offset-sm-2 {
-    margin-left: 16.6666666667%;
-  }
-
-  .offset-sm-3 {
-    margin-left: 25%;
-  }
-
-  .offset-sm-4 {
-    margin-left: 33.3333333333%;
-  }
-
-  .offset-sm-5 {
-    margin-left: 41.6666666667%;
-  }
-
-  .offset-sm-6 {
-    margin-left: 50%;
-  }
-
-  .offset-sm-7 {
-    margin-left: 58.3333333333%;
-  }
-
-  .offset-sm-8 {
-    margin-left: 66.6666666667%;
-  }
-
-  .offset-sm-9 {
-    margin-left: 75%;
-  }
-
-  .offset-sm-10 {
-    margin-left: 83.3333333333%;
-  }
-
-  .offset-sm-11 {
-    margin-left: 91.6666666667%;
-  }
+.row-cols-sm-2 > * {
+  /* Set flex-basis and max-width to 50% for 2 columns per row on small screens */
+  flex: 0 0 50%;
+  max-width: 50%;
 }
+
+.row-cols-sm-3 > * {
+  /* Set flex-basis and max-width to 33.3333% for 3 columns per row on small screens */
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+
+.row-cols-sm-4 > * {
+  /* Set flex-basis and max-width to 25% for 4 columns per row on small screens */
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.row-cols-sm-5 > * {
+  /* Set flex-basis and max-width to 20% for 5 columns per row on small screens */
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.row-cols-sm-6 > * {
+  /* Set flex-basis and max-width to 16.6667% for 6 columns per row on small screens */
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+
+.col-sm-auto {
+  /* Automatically adjust flex-basis and width based on content, max-width set to 100% */
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.col-sm-1 {
+  /* Set flex-basis and max-width to 8.3333% for 1/12th column width on small screens */
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+
+.col-sm-2 {
+  /* Set flex-basis and max-width to 16.6667% for 2/12th column width on small screens */
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+
+.col-sm-3 {
+  /* Set flex-basis and max-width to 25% for 3/12th column width on small screens */
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-sm-4 {
+  /* Set flex-basis and max-width to 33.3333% for 4/12th column width on small screens */
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+
+.col-sm-5 {
+  /* Set flex-basis and max-width to 41.6667% for 5/12th column width on small screens */
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+
+.col-sm-6 {
+  /* Set flex-basis and max-width to 50% for 6/12th column width (half) on small screens */
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-sm-7 {
+  /* Set flex-basis and max-width to 58.3333% for 7/12th column width on small screens */
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.col-sm-8 {
+  /* Set flex-basis and max-width to 66.6667% for 8/12th column width on small screens */
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+}
+
+.col-sm-9 {
+  /* Set flex-basis and max-width to 75% for 9/12th column width on small screens */
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-sm-10 {
+  /* Set flex-basis and max-width to 83.3333% for 10/12th column width on small screens */
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+
+.col-sm-11 {
+  /* Set flex-basis and max-width to 91.6667% for 11/12th column width on small screens */
+  flex: 0 0 91.6666666667%;
+  max-width: 91.6666666667%;
+}
+
+.col-sm-12 {
+  /* Set flex-basis and max-width to 100% for full-width column on small screens */
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.order-sm-first {
+  /* Set the order to -1 to make the element appear first on small screens */
+  order: -1;
+}
+
+.order-sm-last {
+  /* Set the order to 13 to make the element appear last on small screens */
+  order: 13;
+}
+
+.order-sm-0 {
+  /* Set the order to 0 to position the element in its natural order on small screens */
+  order: 0;
+}
+
+.order-sm-1 {
+  /* Set the order to 1 to position the element after the first element on small screens */
+  order: 1;
+}
+
+.order-sm-2 {
+  /* Set the order to 2 to position the element after the second element on small screens */
+  order: 2;
+}
+
+.order-sm-3 {
+  /* Set the order to 3 to position the element after the third element on small screens */
+  order: 3;
+}
+
+.order-sm-4 {
+  /* Set the order to 4 to position the element after the fourth element on small screens */
+  order: 4;
+}
+
+.order-sm-5 {
+  /* Set the order to 5 to position the element after the fifth element on small screens */
+  order: 5;
+}
+
+.order-sm-6 {
+  /* Set the order to 6 to position the element after the sixth element on small screens */
+  order: 6;
+}
+
+.order-sm-7 {
+  /* Set the order to 7 to position the element after the seventh element on small screens */
+  order: 7;
+}
+
+.order-sm-8 {
+  /* Set the order to 8 to position the element after the eighth element on small screens */
+  order: 8;
+}
+
+.order-sm-9 {
+  /* Set the order to 9 to position the element after the ninth element on small screens */
+  order: 9;
+}
+
+.order-sm-10 {
+  /* Set the order to 10 to position the element after the tenth element on small screens */
+  order: 10;
+}
+
+.order-sm-11 {
+  /* Set the order to 11 to position the element after the eleventh element on small screens */
+  order: 11;
+}
+
+.order-sm-12 {
+  /* Set the order to 12 to position the element after the twelfth element on small screens */
+  order: 12;
+}
+
+.offset-sm-0 {
+  /* Set margin-left to 0 to remove any offset on small screens */
+  margin-left: 0;
+}
+
+.offset-sm-1 {
+  /* Set margin-left to 8.3333% to offset the element by 1/12th of the width on small screens */
+  margin-left: 8.3333333333%;
+}
+
+.offset-sm-2 {
+  /* Set margin-left to 16.6667% to offset the element by 2/12th of the width on small screens */
+  margin-left: 16.6666666667%;
+}
+
+.offset-sm-3 {
+  /* Set margin-left to 25% to offset the element by 3/12th of the width on small screens */
+  margin-left: 25%;
+}
+
+.offset-sm-4 {
+  /* Set margin-left to 33.3333% to offset the element by 4/12th of the width on small screens */
+  margin-left: 33.3333333333%;
+}
+
+.offset-sm-5 {
+  /* Set margin-left to 41.6667% to offset the element by 5/12th of the width on small screens */
+  margin-left: 41.6666666667%;
+}
+
+.offset-sm-6 {
+  /* Set margin-left to 50% to offset the element by 6/12th of the width on small screens */
+  margin-left: 50%;
+}
+
+.offset-sm-7 {
+  /* Set margin-left to 58.3333% to offset the element by 7/12th of the width on small screens */
+  margin-left: 58.3333333333%;
+}
+
+.offset-sm-8 {
+  /* Set margin-left to 66.6667% to offset the element by 8/12th of the width on small screens */
+  margin-left: 66.6666666667%;
+}
+.col-sm-8 {
+  /* Set flex-basis and max-width to 66.6667% for 8/12th column width on small screens */
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+}
+
+.col-sm-9 {
+  /* Set flex-basis and max-width to 75% for 9/12th column width on small screens */
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-sm-10 {
+  /* Set flex-basis and max-width to 83.3333% for 10/12th column width on small screens */
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+
+.col-sm-11 {
+  /* Set flex-basis and max-width to 91.6667% for 11/12th column width on small screens */
+  flex: 0 0 91.6666666667%;
+  max-width: 91.6666666667%;
+}
+
+.col-sm-12 {
+  /* Set flex-basis and max-width to 100% for full-width column on small screens */
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.order-sm-first {
+  /* Set the order to -1 to make the element appear first on small screens */
+  order: -1;
+}
+
+.order-sm-last {
+  /* Set the order to 13 to make the element appear last on small screens */
+  order: 13;
+}
+
+.order-sm-0 {
+  /* Set the order to 0 to position the element in its natural order on small screens */
+  order: 0;
+}
+
+.order-sm-1 {
+  /* Set the order to 1 to position the element after the first element on small screens */
+  order: 1;
+}
+
+.order-sm-2 {
+  /* Set the order to 2 to position the element after the second element on small screens */
+  order: 2;
+}
+
+.order-sm-3 {
+  /* Set the order to 3 to position the element after the third element on small screens */
+  order: 3;
+}
+
+.order-sm-4 {
+  /* Set the order to 4 to position the element after the fourth element on small screens */
+  order: 4;
+}
+
+.order-sm-5 {
+  /* Set the order to 5 to position the element after the fifth element on small screens */
+  order: 5;
+}
+
+.order-sm-6 {
+  /* Set the order to 6 to position the element after the sixth element on small screens */
+  order: 6;
+}
+
+.order-sm-7 {
+  /* Set the order to 7 to position the element after the seventh element on small screens */
+  order: 7;
+}
+
+.order-sm-8 {
+  /* Set the order to 8 to position the element after the eighth element on small screens */
+  order: 8;
+}
+
+.order-sm-9 {
+  /* Set the order to 9 to position the element after the ninth element on small screens */
+  order: 9;
+}
+
+.order-sm-10 {
+  /* Set the order to 10 to position the element after the tenth element on small screens */
+  order: 10;
+}
+
+.order-sm-11 {
+  /* Set the order to 11 to position the element after the eleventh element on small screens */
+  order: 11;
+}
+
+.order-sm-12 {
+  /* Set the order to 12 to position the element after the twelfth element on small screens */
+  order: 12;
+}
+
+.offset-sm-0 {
+  /* Set margin-left to 0 to remove any offset on small screens */
+  margin-left: 0;
+}
+
+.offset-sm-1 {
+  /* Set margin-left to 8.3333% to offset the element by 1/12th of the width on small screens */
+  margin-left: 8.3333333333%;
+}
+
+.offset-sm-2 {
+  /* Set margin-left to 16.6667% to offset the element by 2/12th of the width on small screens */
+  margin-left: 16.6666666667%;
+}
+
+.offset-sm-3 {
+  /* Set margin-left to 25% to offset the element by 3/12th of the width on small screens */
+  margin-left: 25%;
+}
+
+.offset-sm-4 {
+  /* Set margin-left to 33.3333% to offset the element by 4/12th of the width on small screens */
+  margin-left: 33.3333333333%;
+}
+
+.offset-sm-5 {
+  /* Set margin-left to 41.6667% to offset the element by 5/12th of the width on small screens */
+  margin-left: 41.6666666667%;
+}
+
+.offset-sm-6 {
+  /* Set margin-left to 50% to offset the element by 6/12th of the width on small screens */
+  margin-left: 50%;
+}
+
+.offset-sm-7 {
+  /* Set margin-left to 58.3333% to offset the element by 7/12th of the width on small screens */
+  margin-left: 58.3333333333%;
+}
+
+.offset-sm-8 {
+  /* Set margin-left to 66.6667% to offset the element by 8/12th of the width on small screens */
+  margin-left: 66.6666666667%;
+}
+.offset-sm-9 {
+  /* Set margin-left to 75% to offset the element by 9/12th of the width on small screens */
+  margin-left: 75%;
+}
+
+.offset-sm-10 {
+  /* Set margin-left to 83.3333% to offset the element by 10/12th of the width on small screens */
+  margin-left: 83.3333333333%;
+}
+
+.offset-sm-11 {
+  /* Set margin-left to 91.6667% to offset the element by 11/12th of the width on small screens */
+  margin-left: 91.6666666667%;
+}
+
 @media (min-width: 768px) {
-  .col-md {
-    flex-basis: 0;
-    flex-grow: 1;
-    min-width: 0;
-    max-width: 100%;
-  }
+/* Media query for devices with a minimum width of 768px (medium screens) */
 
-  .row-cols-md-1 > * {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.col-md {
+  /* Set flex-basis to 0 and allow the column to grow to fill available space on medium screens */
+  flex-basis: 0;
+  flex-grow: 1;
+  /* Set the minimum width of the column to 0 and max width to 100% */
+  min-width: 0;
+  max-width: 100%;
+}
 
-  .row-cols-md-2 > * {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
+.row-cols-md-1 > * {
+  /* Set flex-basis and max-width to 100% for a single column layout on medium screens */
+  flex: 0 0 100%;
+  max-width: 100%;
+}
 
-  .row-cols-md-3 > * {
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
-  }
+.row-cols-md-2 > * {
+  /* Set flex-basis and max-width to 50% for a two-column layout on medium screens */
+  flex: 0 0 50%;
+  max-width: 50%;
+}
 
-  .row-cols-md-4 > * {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
+.row-cols-md-3 > * {
+  /* Set flex-basis and max-width to 33.3333% for a three-column layout on medium screens */
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
 
-  .row-cols-md-5 > * {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
+.row-cols-md-4 > * {
+  /* Set flex-basis and max-width to 25% for a four-column layout on medium screens */
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.row-cols-md-5 > * {
+  /* Set flex-basis and max-width to 20% for a five-column layout on medium screens */
+  flex: 0 0 20%;
+  max-width: 20%;
+}
 
   .row-cols-md-6 > * {
     flex: 0 0 16.6666666667%;

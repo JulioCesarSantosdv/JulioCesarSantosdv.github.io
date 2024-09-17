@@ -48,76 +48,52 @@ footer {
     background-color: var(--background-color);
     color: var(--text-color);
 }
-
-
 /* Botão para alternar entre os modos escuro/claro */
 .theme-toggle {
-    /* Define o botão como posição fixa, sempre visível na tela */
-    position: left;
-
-    /* Define a posição do botão a 20px do topo */
+    position: absolute;
     top: 20px;
-
-    /* Centraliza o botão horizontalmente */
     left: 50%;
-
-    /* Move o botão 50% de sua largura para a esquerda, para centralização exata */
     transform: translateX(-50%);
-
-    /* Cor de fundo do botão no modo claro */
-    background-color: #fff;
-
-    /* Remove as bordas do botão */
+    background-color: transparent;
     border: none;
-
-    /* Define o botão com bordas arredondadas */
-    border-radius: 50%;
-
-    /* Define o preenchimento interno do botão */
+    color: #fff;
     padding: 10px;
-
-    /* Adiciona uma sombra ao redor do botão */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-    /* Define o cursor como uma mão (indicando que o botão é clicável) */
-    cursor: pointer;
-
-    /* Define a sobreposição do botão sobre outros elementos da página */
+    border-radius: 50%;
+    box-shadow: none;
+    transition: color 0.3s ease;
     z-index: 999;
+}
 
-    /* Transições suaves para a cor de fundo e cor de texto quando alternado */
-    transition: background-color 0.3s, color 0.3s;
+/* Remove o contorno ao clicar ou focar no botão */
+.theme-toggle:focus {
+    outline: none;
 }
 
 /* Estiliza o ícone dentro do botão */
 .theme-toggle i {
-    /* Cor do ícone no modo claro */
-    color: #333;
-
-    /* Tamanho da fonte do ícone */
+    color: #fff;
     font-size: 20px;
 }
 
-/* Ícone do sol (usado no modo claro), oculto por padrão */
+/* Ocultar ícone do sol no modo claro (por padrão) */
 .theme-toggle .fa-sun {
     display: none;
+    color: #fff; /* Define a cor do sol como branco */
 }
 
-/* Quando o corpo estiver no modo escuro, altere as cores do botão */
+/* Quando o corpo estiver no modo escuro */
 body.dark-mode .theme-toggle {
-    /* Cor de fundo do botão no modo escuro */
-    background-color: #333;
-
-    /* Cor do texto no modo escuro */
-    color: #fff;
+    background-color: transparent;
+    color: #007bff;
 }
 
-/* Quando o corpo estiver no modo escuro, mostre o ícone do sol */
+/* Mostra o ícone do sol no modo escuro */
 body.dark-mode .theme-toggle .fa-sun {
     display: inline;
+    color: #fff; /* Mantém o ícone do sol branco */
 }
 
-/* Quando o corpo estiver no modo escuro, oculte o ícone da lua */
+/* Oculta o ícone da lua no modo escuro */
 body.dark-mode .theme-toggle .fa-moon {
     display: none;
 }
