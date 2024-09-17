@@ -11,7 +11,7 @@ Esse código CSS define o estilo de um botão flutuante que alterna entre o modo
 
 body.dark-mode {
     --background-color: #333333;
-    --text-color: #ffffff;
+    --text-color: whitesmoke;
 }
 
 body {
@@ -28,14 +28,14 @@ nav {
 
 /* style.css */
 body {
-    background-color: white;
+    background-color: whitesmoke;
     color: black;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body.dark-mode {
     background-color: black;
-    color: white;
+    color: whitesmoke;
 }
 
 button {
