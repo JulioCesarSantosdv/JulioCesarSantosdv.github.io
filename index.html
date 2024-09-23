@@ -7,21 +7,26 @@
     <meta name="author" content="" />
     <title>Resume - Julio Cesar Santos</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-     <!-- Incluindo o Font Awesome -->
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Google fonts-->
+
+    <!-- Mantendo apenas o Font Awesome (versão mais recente) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" /> 
-    <!-- Custom CSS for Dark/Light Mode -->
-    <link href="css/theme-toggle.css" rel="stylesheet" /> 
-    <!-- CSS for Hover Effect and Modal -->
-    <link href="css/modal.css" rel="stylesheet" />    
-</head>
 
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Custom CSS for Dark/Light Mode -->
+    <link href="css/theme-toggle.css" rel="stylesheet" />
+
+    <!-- CSS for Hover Effect and Modal -->
+    <link href="css/modal.css" rel="stylesheet" />
+
+    <!-- CSS for Skill Bar -->
+    <link href="css/skill-bar.css" rel="stylesheet" />
+</head>
 
     <!-- Botão de troca de idioma -->
     <button id="languageSwitcher">EN</button>
@@ -195,8 +200,7 @@
     <div class="flex-shrink-0"><span class="text-primary" data-en="March 2015 to December 2015" data-pt="Março de 2015 a Dezembro de 2015">March 2015 to December 2015</span></div>
 </div>
 </section>
-
-        <hr class="m-0" />
+<hr class="m-0" />
         <!-- Education -->
         <section class="resume-section" id="Education">
             <div class="lead mb-5">
@@ -270,26 +274,87 @@
         </section>
         <hr class="m-0" />
  <!-- Skills -->
- <section class="resume-section" id="Skills">
-    <div class="lead mb-5">
-        <h2 class="mb-5" data-en="Skills" data-pt="Habilidades">Skills</h2>
-        <div class="subheading mb-3" data-en="Technical Skills" data-pt="Habilidades Técnicas">Technical Skills</div>
-        <ul class="list-inline dev-icons">
-            <li class="list-inline-item"><i class="fab fa-html5" data-tech="HTML5"></i></li>
-            <li class="list-inline-item"><i class="fab fa-css3-alt" data-tech="CSS3"></i></li>
-            <li class="list-inline-item"><i class="fab fa-js-square" data-tech="JavaScript"></i></li>
-            <li class="list-inline-item"><i class="fab fa-angular" data-tech="Angular"></i></li>
-            <li class="list-inline-item"><i class="fab fa-react" data-tech="React"></i></li>
-            <li class="list-inline-item"><i class="fab fa-node-js" data-tech="Node.js"></i></li>
-            <li class="list-inline-item"><i class="fab fa-sass" data-tech="Sass"></i></li>
-            <li class="list-inline-item"><i class="fab fa-wordpress" data-tech="WordPress"></i></li>
-            <li class="list-inline-item"><i class="fab fa-git" data-tech="Git"></i></li>
-            <li class="list-inline-item"><i class="fab fa-linux" data-tech="Linux"></i></li>
-        </ul>
+<section class="resume-section" id="Skills">
+    <div class="resume-section-content">
+        <div class="lead mb-5">
+            <h2 class="mb-5" data-en="Skills" data-pt="Habilidades">Skills</h2>
+            <div class="subheading mb-3" data-en="Technical Skills" data-pt="Habilidades Técnicas">Technical Skills</div>
+
+            <div class="row">
+                <!-- Primeira coluna (esquerda) -->
+                <div class="col-md-6">
+                    <!-- HTML5 Skill Bar -->
+                    <p data-en="HTML5" data-pt="HTML5">HTML5</p>
+                    <div class="skill-bar">
+                        <i class="fab fa-html5" style="font-size:48px; color:#385bbd; margin-right:15px;"></i>
+                        <div class="progress">
+                            <div class="progress-bar" data-skill="40"></div>
+                        </div>
+                    </div><br>
+                    <!-- CSS3 Skill Bar -->
+                    <p data-en="CSS" data-pt="CSS">CSS</p>
+                    <div class="skill-bar">
+                        <i class="fab fa-css3-alt" style="font-size:48px; color:#385bbd; margin-right:15px;"></i>
+                        <div class="progress">
+                            <div class="progress-bar" data-skill="30"></div>
+                        </div>
+                    </div><br>
+                    <!-- JavaScript Skill Bar -->
+                    <p data-en="JAVASCRIPT" data-pt="JAVASCRIPT">JAVASCRIPT</p>
+                    <div class="skill-bar">
+                        <i class="fab fa-js-square" style="font-size:48px; color:#385bbd; margin-right:15px;"></i>
+                        <div class="progress">
+                            <div class="progress-bar" data-skill="30"></div>
+                        </div>
+                    </div><br>
+                    <!-- React Skill Bar -->
+                     <p data-en="REACT" data-pt="REACT">REACT</p>
+                     <div class="skill-bar">
+                        <i class="fab fa-react" style="font-size:48px; color:#385bbd; margin-right:15px;"></i>
+                        <div class="progress">
+                            <div class="progress-bar" data-skill="20"></div>
+                        </div>
+                    </div><br>
+                <!-- Segunda coluna (direita) -->
+                <div class="col-md-6">
+                    <!-- Node Skill Bar -->
+                    <p data-en="NODE" data-pt="NODE">NODE</p>
+                    <div class="skill-bar">
+                        <i class="fab fa-node" style="font-size:48px; color:#385bbd; margin-right:15px;"></i>
+                        <div class="progress">
+                            <div class="progress-bar" data-skill="20"></div>
+                        </div>
+                    </div><br>
+                    <!-- PHP Skill Bar -->
+                    <p data-en="PHP" data-pt="PHP">PHP</p>
+                    <div class="skill-bar">
+                        <i class="fab fa-php" style="font-size:48px; color:#385bbd; margin-right:15px;"></i>
+                        <div class="progress">
+                            <div class="progress-bar" data-skill="5"></div>
+                        </div>
+                    </div><br>
+                    <!-- Python Skill Bar -->
+                     <p data-en="PYTHON" data-pt="PYTHON">PYTHON</p>
+                     <div class="skill-bar">
+                        <i class="fab fa-python" style="font-size:48px; color:#385bbd; margin-right:15px;"></i>
+                        <div class="progress">
+                            <div class="progress-bar" data-skill="25"></div>
+                        </div>
+                    </div><br>
+                    <!-- SQL Skill Bar -->
+                    <p data-en="SQL" data-pt="SQL">SQL</p>
+                    <div class="skill-bar">
+                        <i class="fa fa-database" style="font-size:48px; color:#385bbd; margin-right:15px;"></i>
+                        <div class="progress">
+                            <div class="progress-bar" data-skill="10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <hr class="m-0" />
-
 <!-- Modal Structure -->
 <div id="techModal" class="modal">
     <div class="modal-content">
@@ -368,14 +433,13 @@
         </div>
     </div>
 </section>
-
-
     <!-- Core theme JS-->
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/theme-toggle.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/skill-bar.js"></script>
     <script>
         // Função para trocar o idioma
         document.getElementById('languageSwitcher').addEventListener('click', function() {
