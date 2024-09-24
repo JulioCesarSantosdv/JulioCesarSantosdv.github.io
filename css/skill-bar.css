@@ -10,6 +10,10 @@
 .skill-bar .progress-bar::after {
     content: "";
     display: block;
+    background-color: #385bbd;
+    height: 100%;
+    width: 0; /* Largura inicial para garantir animação */
+    transition: width 1s ease-in-out; /* Suaviza a animação da largura */
 }
 
 .skill-bar .progress-bar[data-skill="50"] {
